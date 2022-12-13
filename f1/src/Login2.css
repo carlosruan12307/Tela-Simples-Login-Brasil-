@@ -1,0 +1,44 @@
+
+body{
+
+
+}
+
+
+
+.snow {
+  position: absolute;
+  --t: 0px;
+  top: -500px;
+  left: 0px;
+  bottom: 0;
+  right: 0px;
+  background-repeat: repeat;
+  background-image: 
+  radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+  radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+  radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 700px 650px;
+  animation: snow 3s linear infinite;
+  content: "";
+}
+
+
+
+@keyframes snow {
+0%{
+transform: translate3d(var(--t), 0 , 0);
+}
+
+  100%{
+   transform: translate3d(calc(var(--t) + 50px),650px,0);
+   --t: calc(var(--t) + 50px);
+  }
+  
+}
